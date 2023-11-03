@@ -9,4 +9,16 @@ public class Schiff {
     public String getName() {
         return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getTonnage() {
+        return tonnage;
+    }
+
+    public void setTonnage(double tonnage) {
+        this.tonnage = tonnage;
+    }
 }

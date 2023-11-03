@@ -10,8 +10,25 @@ public class SegelSchiff extends Schiff{
     public String getName() {
         return name;
     }
+    public void setName(String name) {
+        super.setName(name);
+    }
+
+    @Override
+    public double getTonnage() {
+        return super.getTonnage();
+    }
+
+    @Override
+    public void setTonnage(double tonnage) {
+        super.setTonnage(tonnage);
+    }
 
     public double getSegelflaeche() {
         return segelflaeche;
+    }
+
+    public void setSegelflaeche(double segelflaeche) {
+        this.segelflaeche = segelflaeche;
     }
 }
