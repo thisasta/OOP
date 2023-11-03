@@ -105,7 +105,7 @@ public class Steuerung {
     }
   }
 
-  public void einzahlen() {
+  public void einzahlen() {S
     System.out.println("EINZAHLEN: ");
     System.out.print("Bitte die KontoNr eingeben: ");
     Scanner sc = new Scanner(System.in);

@@ -36,7 +36,7 @@ public class Konto {
   }
 
   public boolean auszahlen(double betrag) {
-    if (kontoStand < betrag) {
+    if (kontoStand >= betrag) {
       kontoStand -= betrag;
       return true;
     }
