@@ -1,34 +1,28 @@
-public class SegelSchiff extends Schiff{
+/**
+ * Vererbung Schiffe mit protected
+ */
+ 
+public class SegelSchiff extends Schiff {
 
-    private double segelflaeche;
-    public SegelSchiff(double tonnage, double segelflaeche) {
-        super(tonnage);
-        this.segelflaeche = segelflaeche;
-        name = "Segelschiff";
-    }
+  private double segelFlaeche;
 
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        super.setName(name);
-    }
-
-    @Override
-    public double getTonnage() {
-        return super.getTonnage();
-    }
-
-    @Override
-    public void setTonnage(double tonnage) {
-        super.setTonnage(tonnage);
-    }
-
-    public double getSegelflaeche() {
-        return segelflaeche;
-    }
-
-    public void setSegelflaeche(double segelflaeche) {
-        this.segelflaeche = segelflaeche;
-    }
+  
+  
+  public SegelSchiff(String name, double tonnage, double segelFlaeche) {
+    
+    super(name, tonnage);
+    this.segelFlaeche = segelFlaeche;
+    super.setSchiffsTyp("Segelschiff");
+  }
+  
+  
+  public double getSegelFlaeche() {
+    return segelFlaeche;
+  }
+  
+  public void setSegelFlaeche(double segelFlaeche) {
+    this.segelFlaeche = segelFlaeche;
+  }
+  
+  
 }

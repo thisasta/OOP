@@ -1,16 +1,26 @@
-public class SchiffFahrt {
+/*
+public class SchiffFahrt  {
+  
+  public static void main(String[] args) {
 
-    private Schiff s1 = new Schiff(1000);
-    private SegelSchiff s2 = new SegelSchiff(2000, 200);
-    private MotorSchiff s3 = new MotorSchiff(3000, 30);
+    Schiff s1 = new Schiff(1000);
+    SegelSchiff s2 = new SegelSchiff(2000,200);
+    MotorSchiff s3 = new MotorSchiff(3000,30);
+    
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    
+    System.out.println("\ts1: " + s1.getSchiffsTyp()+"[Tonnage=" + s1.getTonnage() + "]");
+    
+    System.out.println("\ts2: " + s2.getSchiffsTyp()+"[Segelflaeche= " + s2.getSegelFlaeche()+ ", Tonnage=" + s2.getTonnage() + "]");
+    
+    System.out.println("\ts3: " + s3.getSchiffsTyp()+"[Motorleistung= " + s3.getMotorLeistung() + ", Tonnage=" + s3.getTonnage() + "]");
+    
+    System.out.println();
+    System.out.println();
+    System.out.println();
 
-    public void ausgabe() {
-        System.out.println("s1: " + s1.getName() + "[Tonnage=" + s1.tonnage +"]");
-        System.out.println("s2: " + s2.getName() + "[Segelflaeche= " + s2.getSegelflaeche() +", Tonnage=" + s2.tonnage +"]");
-        System.out.println("s3: " + s3.getName() + "[Motorleistung= " + s3.getMotorleistung() +", Tonnage=" + s3.tonnage +"]");
-    }
-    public static void main(String[] args) {
-        SchiffFahrt s1 = new SchiffFahrt();
-        s1.ausgabe();
-    }
+  }
 }
+*/
