@@ -6,8 +6,6 @@ public class SegelSchiff extends Schiff {
 
   private double segelFlaeche;
 
-  
-  
   public SegelSchiff(String name, double tonnage, double segelFlaeche) {
     
     super(name, tonnage);
