@@ -15,13 +15,13 @@ public class SteuerungKundeSchiffe {
             if (meineKunden[i] == null) {
                 meineKunden[i] = new Kunde();
                 System.out.print("Name des " + (i+1) + ". Kunden eingeben: ");
-                meineKunden[i].setName(scn.next());
+                meineKunden[i].setName(scn.nextLine());
                 break;
             }
         }
     }
 
-    public boolean eingabeNeuesSchiffAnlegen(){
+    public void eingabeNeuesSchiffAnlegen(){
         Scanner scn = new Scanner(System.in);
         System.out.print("\n\nEingabe Kundennummer");
         int kundenNr = scn.nextInt();
@@ -32,12 +32,16 @@ public class SteuerungKundeSchiffe {
         for (int i = 0; i < meineKunden.length; i++) {
             if (meineKunden[i] != null) {
                 if (kundenNr == meineKunden[i].getKundenNr()) {
-                    meineKunden[i].neuesSchiffAnlegen(name, tonnage);
-                    return true;
+                    if (meineKunden[i].neuesSchiffAnlegen(name, tonnage)) {
+                        System.out.println("Yippie!!");
+                        break;
+                    } else {
+                        System.out.println("Didn't work!");
+                        break;
+                    }
                 }
             }
         }
-        return false;
     }
 
     public void ausgabeKunden(){
@@ -54,9 +58,9 @@ public class SteuerungKundeSchiffe {
         for (int i = 0; i < meineKunden.length; i++) {
             if (meineKunden[i] != null) {
                 System.out.println("Alle Schiffe von " + meineKunden[i].getName() + "(Kundennr: " + meineKunden[i].getKundenNr() + ") : ");
-                for (int j = 0; j < meineKunden[i].meineSchiffe.length; j++) {
-                    if (meineKunden[i].meineSchiffe[j] != null) {
-                        System.out.println((j+1) + ". Schiff: " + meineKunden[i].meineSchiffe[j].getName() + " (Tonnage: " + meineKunden[i].meineSchiffe[j].getTonnage() + ")");
+                for (int j = 0; j < meineKunden[i].getMeineSchiffe().length; j++) {
+                    if (meineKunden[i].getMeineSchiffe()[j] != null) {
+                        System.out.println((j+1) + ". Schiff: " + meineKunden[i].getMeineSchiffe()[j].getName() + " (Tonnage: " + meineKunden[i].getMeineSchiffe()[j].getTonnage() + ")");
                     }
                 }
             }
@@ -78,6 +82,7 @@ public class SteuerungKundeSchiffe {
             switch (eingabe){
                 case 0:
                     System.exit(0);
+                    break;
                 case 1:
                     eingabeNeuenKundenAnlegen();
                     break;

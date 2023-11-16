@@ -1,8 +1,8 @@
 public class Kunde {
     private static int kundenstammNr = 1000;
     private int kundenNr;
-    String name;
-    Schiff[] meineSchiffe;
+    private String name;
+    private Schiff[] meineSchiffe;
 
     public Kunde(){
         this.meineSchiffe = new Schiff[5];
