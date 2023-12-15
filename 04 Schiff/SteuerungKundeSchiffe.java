@@ -23,9 +23,9 @@ public class SteuerungKundeSchiffe {
 
     public void eingabeNeuesSchiffAnlegen(){
         Scanner scn = new Scanner(System.in);
-        System.out.print("\n\nEingabe Kundennummer");
+        System.out.print("\n\nEingabe Kundennummer: ");
         int kundenNr = scn.nextInt();
-        System.out.print("Eingabe Schiffstyp: (1: Motorschiff, 2: Segelschiff)");
+        System.out.print("Eingabe Schiffstyp: (1: Motorschiff, 2: Segelschiff): ");
         int type = scn.nextInt();
         if (type == 1) {
             System.out.print("\nEingabe Schiffname: ");
@@ -86,14 +86,14 @@ public class SteuerungKundeSchiffe {
                 System.out.println("Alle Schiffe von " + meineKunden[i].getName() + "(Kundennr: " + meineKunden[i].getKundenNr() + ") : ");
                 for (int j = 0; j < meineKunden[i].getMeineSchiffe().length; j++) {
                     if (meineKunden[i].getMeineSchiffe()[j] != null) {
-                        if (meineKunden[i].getMeineSchiffe()[j].getSchiffsTyp().equals("Motorschiff")) {
+                        if (meineKunden[i].getMeineSchiffe()[j] instanceof MotorSchiff) {
                             System.out.println((j+1) + ".\t Schiff: " + meineKunden[i].getMeineSchiffe()[j].getName() + "\n\tSchiffstyp: " + meineKunden[i].getMeineSchiffe()[j].getSchiffsTyp() + "\n\tTonnage: " + meineKunden[i].getMeineSchiffe()[j].getTonnage()
-                             + "\n\tMotorleistung" + ((MotorSchiff)meineKunden[i].getMeineSchiffe()[j]).getMotorLeistung() + " PS");
+                             + "\n\tMotorleistung: " + ((MotorSchiff)meineKunden[i].getMeineSchiffe()[j]).getMotorLeistung() + " PS");
                         }
 
-                        if (meineKunden[i].getMeineSchiffe()[j].getSchiffsTyp().equals("Segelschiff")) {
+                        if (meineKunden[i].getMeineSchiffe()[j] instanceof SegelSchiff ) {
                             System.out.println((j+1) + ".\t Schiff: " + meineKunden[i].getMeineSchiffe()[j].getName() + "\n\tSchiffstyp: " + meineKunden[i].getMeineSchiffe()[j].getSchiffsTyp() + "\n\tTonnage: " + meineKunden[i].getMeineSchiffe()[j].getTonnage()
-                                    + "\n\tSegelflaeche" + ((SegelSchiff)meineKunden[i].getMeineSchiffe()[j]).getSegelFlaeche() + " qm");
+                                    + "\n\tSegelflaeche: " + ((SegelSchiff)meineKunden[i].getMeineSchiffe()[j]).getSegelFlaeche() + " qm");
                         }
                     }
                 }
@@ -138,3 +138,5 @@ public class SteuerungKundeSchiffe {
         s.menue();
     }
 }
+
+//NZ9T52
