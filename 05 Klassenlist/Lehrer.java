@@ -1,14 +1,13 @@
-public class Lehrer {
-    private String name;
+public class Lehrer extends Person{
     private String kuerzel;
 
     public Lehrer(String name, String kuerzel) {
-        this.name = name;
+        super(name);
         this.kuerzel = kuerzel;
     }
 
     public String getName() {
-        return name;
+        return super.getName();
     }
 
     public String getKuerzel() {
@@ -20,11 +19,11 @@ public class Lehrer {
     }
 
     public void setName(String name) {
-        this.name = name;
+        super.setName(name);
     }
 
     @Override
     public String toString() {
-        return this.name + " (" + this.kuerzel + ")";
+        return super.getName() + " (" + this.kuerzel + ")";
     }
 }

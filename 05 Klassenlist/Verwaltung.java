@@ -26,8 +26,7 @@ public class Verwaltung {
 
     public void automatischeEingabe() {
         meineKlasse.setName("BG12-DV");
-        meineKlasse.getMeinTutor().setKuerzel("sclo");  //Zeile darf nicht ver�ndert werden!
-        meineKlasse.getMeinTutor().setName("Schlosser");
+        meineKlasse.setMeinTutor(new Lehrer("Michael Schlosser", "SCLO"));
 
         meineKlasse.neuerSchuelerHinzufuegen("Max Muster");
         meineKlasse.neuerSchuelerHinzufuegen("Friedrich List");
@@ -62,6 +61,9 @@ public class Verwaltung {
                 case 2:
                     ausgabe();
                     break;
+                case 3:
+                    automatischeEingabe();
+                    break;
                 case 0:
                     System.exit(0);
                     break;
@@ -74,7 +76,7 @@ public class Verwaltung {
         System.out.println("Klassenbezeichnung: " + meineKlasse.getName());
         System.out.println("Tutor: " + meineKlasse.getMeinTutor().getName() + "(" + meineKlasse.getMeinTutor().getKuerzel() + ")");
 
-        System.out.println(meineKlasse.ausgabeSchuelerNamen());
+        System.out.println(meineKlasse.ausgabeSchuelerMitKursen());
     }
 
     public static void main(String[] args) {
